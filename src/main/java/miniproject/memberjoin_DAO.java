@@ -14,8 +14,8 @@ public class memberjoin_DAO {
 	public int member_insert(memberjoin_DTO dto) {
 		int result = this.st.insert("member_insert",dto);
 		
-		System.out.println(result);
-		System.out.println("memberjoin_DAO.java로 값 옴");
+//		System.out.println(result);
+//		System.out.println("memberjoin_DAO.java로 값 옴");
 		return result;
 	}
 }

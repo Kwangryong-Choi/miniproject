@@ -13,12 +13,14 @@ function join_submit(){
 		alert("전화번호를 입력해주세요.")
 	}else if(isNaN(f.phone_num.value)){
 		alert("숫자만 입력해주세요.");
-	}else if(f.box1[0].checked==false || f.box1[1].checked==false || f.box1[2].checked==false){
+	}else if(f.ad_re_box[0].checked==false || f.ad_re_box[1].checked==false || f.ad_re_box[2].checked==false){
 		alert("필수 약관에 모두 동의해주세요.")
 	}else{
-		if(f.ad_use.checked == false){
+		f.ad_required.value = "Y";
+		// 체크박스는 체크되어 있지 않을 경우 value 속성을 사용하지 못하게 됨
+		if(f.ad_use_check.checked == false){
 			f.ad_use.value = "N";
-		}else if(f.ad_use.checked == true){
+		}else if(f.ad_use_check.checked == true){
 			f.ad_use.value = "Y";
 		}
 		alert("해당 정보를 사이트에 반영하시겠습니까?");
@@ -29,29 +31,29 @@ function join_submit(){
 
 function allcheck(){
 	var check_all = document.getElementById("check_all");
-	var box1 = document.getElementsByName("box1");
-	var ea = box1.length;
+	var ad_re_box = document.getElementsByName("ad_re_box");
+	var ea = ad_re_box.length;
 	for(var f=0; f<ea; f++){  //전체선택 클릭시 아래 체크박스 모두 선택되도록 작동 
-		box1[f].checked = true ;  //같은 이름의 name값은 배열로 순차적으로 처리됨
+		ad_re_box[f].checked = true ;  //같은 이름의 name값은 배열로 순차적으로 처리됨
 	}
 	if(check_all.checked == false){
 		for(var f=0; f<ea; f++){  //전체선택 클릭시 아래 체크박스 모두 선택되도록 작동 
-			box1[f].checked = false ;  //같은 이름의 name값은 배열로 순차적으로 처리됨
+			ad_re_box[f].checked = false ;  //같은 이름의 name값은 배열로 순차적으로 처리됨
 		}
 	}
 }
 
 function not_all(){
 	var check_all = document.getElementById("check_all");
-	var box1 = document.getElementsByName("box1");
-	var ea = box1.length;
+	var ad_re_box = document.getElementsByName("ad_re_box");
+	var ea = ad_re_box.length;
 	var ct=0;
 	for(var ff=0; ff<ea; ff++){
-		if(box1[ff].checked == true){
+		if(ad_re_box[ff].checked == true){
 			ct++;
 		}
 	}
-	if(ea == ct){  //
+	if(ea == ct){
 		check_all.checked = true;
 	}else{
 		check_all.checked = false;
@@ -63,8 +65,6 @@ window.onload = function(){
 	http.open("GET","./agree1.txt",false);	// GET 통신을 이용하여 해당 파일을 로드
 	http.send();	// 통신 실행
 	document.getElementById("ag1").innerHTML = http.response;	// HTML에 내용을 출력
-	
-//	var http2 = new XMLHttpRequest;
 	http.open("GET","./agree2.txt",false);
 	http.send();
 	document.getElementById("ag2").innerHTML = http.response;

@@ -14,7 +14,7 @@
    overflow: auto;
 }
 </style>
-<title>Insert title here</title>
+<title>회원가입</title>
 </head>
 <body>
 
@@ -46,12 +46,14 @@
 		
 		<div class="line"></div>
 		
-	<div class="bottom">	
-		<div class="box1"><input type="checkbox" name="box1" onclick="not_all()"> <a class="a1">(필수) <span>만 14세 이상입니다.</span></a></div>
-		<div class="box2"><input type="checkbox" name="box1" onclick="not_all()"> <a class="a2">(필수) <span><u>이용약관</u>에 동의</span></a></div>
-		<div class="box3"><input type="checkbox" name="box1" onclick="not_all()"> <a class="a3">(필수) <span><u>개인정보 수집 및 이용</u>에 동의</span></a></div>
+	<div class="bottom">
+		<input type="hidden" name="ad_required">
+		<div class="box1"><input type="checkbox" name="ad_re_box" onclick="not_all()"> <a class="a1">(필수) <span>만 14세 이상입니다.</span></a></div>
+		<div class="box2"><input type="checkbox" name="ad_re_box" onclick="not_all()"> <a class="a2">(필수) <span><u>이용약관</u>에 동의</span></a></div>
+		<div class="box3"><input type="checkbox" name="ad_re_box" onclick="not_all()"> <a class="a3">(필수) <span><u>개인정보 수집 및 이용</u>에 동의</span></a></div>
 		<section class="text1"><div id="ag1"></div>   </section>
-		<div class="box4"><input type="checkbox" name="ad_use"> <span>(선택) 마케팅 수신에 동의</span></div>
+		<div class="box4"><input type="checkbox" name="ad_use_check"> <span>(선택) 마케팅 수신에 동의</span></div>
+		<input type="hidden" name="ad_use">
 		<section class="text2"><div  id="ag2"></div>   </section>
 	</div>
 		<div><input type="button" value="가입 하기" onclick="join_submit()"></div>
@@ -66,5 +68,5 @@
 <script>
 
 </script>
-<script src="./js/member_join.js?v=2"></script>
+<script src="./js/member_join.js?v=6"></script>
 </html>

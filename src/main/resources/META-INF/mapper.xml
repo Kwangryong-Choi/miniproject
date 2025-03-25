@@ -4,8 +4,8 @@
 <mapper namespace="miniproject.memberjoin_mapper">
 
 <insert id="member_insert">
-insert into member_join (midx,email,password,user_name,phone_num,ad_use,today) 
-values ('0',#{email},#{password},#{user_name},#{phone_num},#{ad_use},now())
+insert into member_join (midx,email,password,user_name,phone_num,ad_required,ad_use,today) 
+values ('0',#{email},#{password},#{user_name},#{phone_num},#{ad_required},#{ad_use},now())
 </insert>
 
 </mapper>

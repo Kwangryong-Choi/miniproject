@@ -10,5 +10,5 @@ import lombok.Setter;
 @Repository("memberjoin_DTO")
 public class memberjoin_DTO {
 	int midx;
-	String email, password, user_name, phone_num, ad_use, today;
+	String email, password, user_name, phone_num, ad_required, ad_use, today;
 }

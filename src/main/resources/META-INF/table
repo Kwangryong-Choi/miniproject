@@ -1,12 +1,15 @@
 create table member_join(
-	midx int unsigned auto_increment,	/* �ڵ� ������ */
-	email varchar(100) not null,	/* �̸��� */
-	password varchar(100) not null,	/* ��й�ȣ */
-	user_name varchar(50) not null,	/* ������̸� */
-	phone_num varchar(50) not null,	/* ��ȭ��ȣ */
-	ad_use enum('Y','N') not null default 'N',		/* ���� ��/�� */
-	today timestamp not null default current_timestamp,	/* �������� */
-	primary key(midx)
+	midx int unsigned auto_increment,	/* 자동증가값 */
+	email varchar(100) not null,	/* 이메일 */
+	password varchar(100) not null,	/* 비밀번호 */
+	user_name varchar(50) not null,	/* 이름 */
+	phone_num varchar(50) not null,	/* 전화번호 */
+	ad_required enum('Y','N') not null default 'N', /* 약관 동의 */
+	ad_use enum('Y','N') not null default 'N', /* 광고 동의 */
+	today timestamp not null default current_timestamp,	/* 가입 날짜 */
+	primary key(midx),
+	unique (email),
+	unique (phone_num)
 )
 
 drop table member_join
