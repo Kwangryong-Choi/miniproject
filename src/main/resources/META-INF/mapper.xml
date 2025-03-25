@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="miniproject.macbook_mapper">
+<mapper namespace="miniproject.memberjoin_mapper">
 
+<insert id="member_insert">
+insert into member_join (midx,email,password,user_name,phone_num,ad_required,ad_use,today) 
+values ('0',#{email},#{password},#{user_name},#{phone_num},#{ad_required},#{ad_use},now())
+</insert>
 
 </mapper>

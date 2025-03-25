@@ -2,8 +2,8 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 <typeAliases>
-	<!-- 
-	<typeAlias alias="macbookdto" type="spring_learning.macbook_DTO"/>
-	 -->
+
+	<typeAlias alias="memberjoin_dto" type="miniproject.memberjoin_DTO"/>
+
 </typeAliases>
 </configuration>
