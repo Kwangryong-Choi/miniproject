@@ -20,6 +20,7 @@ public class main_controller extends md5_pass {
 	
 	@PostMapping("/realty/join_ok.do")
 	public String memberjoin_ok(memberjoin_DTO dto, Model m){
+		/*
 		System.out.println(dto.getMidx());
 		System.out.println(dto.getEmail());
 		System.out.println(dto.getPassword());
@@ -28,20 +29,21 @@ public class main_controller extends md5_pass {
 		System.out.println(dto.getAd_required());
 		System.out.println(dto.getAd_use());
 		System.out.println(dto.getToday());
+		*/
 		try {
 //			System.out.println(this.dao.member_insert(dto));
 			int result = this.dao.member_insert(dto);
-//			System.out.println(result);
+			System.out.println(result);
+			
 			String msg = "";
-			if(result > 0) {
+			if(result == 1) {
 				msg = "alert('회원가입이 정상적으로 되었습니다.');"
 						+ "location.href='./email_search.do';";
 			}
+			System.out.println(msg);
 			m.addAttribute("msg", msg);
 		} catch (Exception e) {
-			String msg = "";
-			msg = "alert('회원가입이 정상적으로 되었습니다.');"
-					+ "location.href='./email_search.do';";
+			
 		}finally {
 			
 		}
