@@ -59,13 +59,3 @@ function not_all(){
 		check_all.checked = false;
 	}
 }
-
-window.onload = function(){
-	var http = new XMLHttpRequest;	// ajax 통신
-	http.open("GET","./agree1.txt",false);	// GET 통신을 이용하여 해당 파일을 로드
-	http.send();	// 통신 실행
-	document.getElementById("ag1").innerHTML = http.response;	// HTML에 내용을 출력
-	http.open("GET","./agree2.txt",false);
-	http.send();
-	document.getElementById("ag2").innerHTML = http.response;
-}
