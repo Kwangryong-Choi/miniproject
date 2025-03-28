@@ -15,6 +15,7 @@
 <!-- 최상단 + 메뉴 끝 -->
 
 <main>
+<form id="em_sc_f" method="post" action="./email_search.do">
 <section class="sub">
 <div>
 <ul>
@@ -23,11 +24,12 @@
 </ul>
 </div>
 <div class="text1">
-<div><input type="text" placeholder="이름을 입력하세요"></div>
-<div><input type="text" placeholder="휴대폰 번호는 - 빼고 숫자만 입력하세요" maxlength="11"></div>
+<div><input type="text" name="sc_user_name" placeholder="이름을 입력하세요"></div>
+<div><input type="text" name="sc_phone_num" placeholder="휴대폰 번호는 - 빼고 숫자만 입력하세요" maxlength="11"></div>
 </div>
-<div><input type="button" value="이메일 찾기"></div>
+<div><input type="button" value="이메일 찾기" onclick="email_search()"></div>
 </section>
+</form>
 </main>
 
  <!-- 카피라이터 (copyright.jsp) -->
@@ -35,4 +37,5 @@
  <!-- 카피라이터 끝 -->
  
 </body>
+<script src="./js/email_search.js?v=1"></script>
 </html>

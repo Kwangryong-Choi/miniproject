@@ -9,8 +9,27 @@ values ('0',#{email},#{password},#{user_name},#{phone_num},#{ad_required},#{ad_u
 </insert>
 
 <select id="email_check" resultType="memberjoin_dto" parameterType="String">
-select email from member_join where email=#{email}
+select password from member_join where email=#{email}
 </select>
 
+<select id="login_ok" resultType="memberjoin_dto" parameterType="Map">
+select user_name from member_join where email=#{lemail} and password=#{lpass}
+</select>
+
+<select id="email_search" resultType="memberjoin_dto" parameterType="Map">
+select email from member_join where user_name=#{sc_user_name} and phone_num=#{sc_phone_num}
+</select>
+
+<select id="passwd_search" resultType="memberjoin_dto" parameterType="Map">
+select password from member_join where email=#{sc_email} and phone_num=#{sc_phone_num}
+</select>
+
+<select id="passwd_check" resultType="memberjoin_dto" parameterType="String">
+select password from member_join where password=#{pr_password}
+</select>
+
+<update id="passwd_update">
+update member_join set password=#{ch_password} where password=#{pr_password}
+</update>
 
 </mapper>

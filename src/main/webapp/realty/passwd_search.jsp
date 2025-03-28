@@ -14,6 +14,7 @@
 	<%@ include file="./top.jsp" %>
 <!-- 최상단 + 메뉴 끝 -->
 
+<form id="pw_sc_f" method="post" action="./passwd_search.do">
 <main>
 <section class="sub">
 <div>
@@ -23,16 +24,18 @@
 </ul>
 </div>
 <div class="text1">
-<div><input type="text" placeholder="가입하신 이메일을 입력하세요"></div>
-<div><input type="text" placeholder="휴대폰 번호는 - 빼고 숫자만 입력하세요"></div>
+<div><input type="text" name="sc_email" placeholder="가입하신 이메일을 입력하세요"></div>
+<div><input type="text" name="sc_phone_num" placeholder="휴대폰 번호는 - 빼고 숫자만 입력하세요"></div>
 </div>
-<div><input type="button" value="비밀번호 찾기"></div>
+<div><input type="button" value="비밀번호 찾기" onclick="passwd_search()"></div>
 </section>
 </main>
+</form>
 
  <!-- 카피라이터 (copyright.jsp) -->
 	<%@ include file="./copyright.jsp" %>
  <!-- 카피라이터 끝 -->
  
 </body>
+<script src="./js/passwd_search.js?v=2"></script>
 </html>
