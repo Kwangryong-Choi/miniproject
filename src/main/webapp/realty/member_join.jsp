@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +27,9 @@
 	<form id="f" method="post">
 		<p>이메일로 회원가입</p>
 		<div>
-			<a>이메일</a> <input type="text" placeholder=" 이메일 주소를 입력해주세요." autocomplete="none" name="email" style="width:400px; float:left;">
-			<input type="button" value="중복체크" class="mail_btn" onclick="email_check">
+			<a>이메일</a> <input type="text" placeholder=" 이메일 주소를 입력해주세요." autocomplete="none" id="email_ck" name="email" style="width:400px; float:left;">
+			<input type="button" value="중복체크" class="mail_btn" onclick="email_check()">
+			<input type="hidden" name="email_checked">
 		</div>
 		<div>
 			<a>비밀번호</a> <input type="password" placeholder=" 10~16자(영문,숫자,특수 문자 조합)로 입력해주세요." autocomplete="none" name="password">
@@ -66,6 +68,31 @@
  
 </body>
 <script>
+window.onload = function(){
+	var http = new XMLHttpRequest;	// ajax 통신
+	http.open("GET","./agree1.txt",false);	// GET 통신을 이용하여 해당 파일을 로드
+	http.send();	// 통신 실행
+	document.getElementById("ag1").innerHTML = http.response;	// HTML에 내용을 출력
+	
+	http.open("GET","./agree2.txt",false);
+	http.send();
+	document.getElementById("ag2").innerHTML = http.response;
+}
+
+
+function email_check(){
+	var email = document.getElementById("email_ck")
+	if(email.value == ""){
+		alert("아이디를 입력해주세요");
+	}else{
+		var http;
+		http = new XMLHttpRequest();
+		http.open("post","./email_check.do",false);
+		http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		http.send("email=" + encodeURIComponent(email.value));
+	}
+}
+
 
 </script>
 <script src="./js/member_join.js?v=6"></script>
