@@ -166,23 +166,44 @@ public class main_controller extends md5_pass {
 	
 	
 	@PostMapping("/realty/counsel.do")
-	public String counsel(memberjoin_DTO dto, @RequestParam(name = "c_lease",required = false) ArrayList<String> lease, 
+	public String counsel(memberjoin_DTO dto, HttpServletResponse res, @RequestParam(name = "c_lease",required = false) ArrayList<String> lease, 
 			@RequestParam(name = "c_living", required = false) ArrayList<String> living) {
-		String c_lease = String.join(",", lease);
-		String c_living = String.join(",", living);
-		Map<String, String> c_data = new HashMap<String, String>();
-		c_data.put("c_name", dto.c_name);
-		c_data.put("c_email", dto.c_email);
-		c_data.put("c_phonenum", dto.c_phonenum);
-		c_data.put("c_lease", c_lease);
-		c_data.put("c_living", c_living);
-		c_data.put("c_day", dto.c_day);
-		c_data.put("c_counsel", dto.c_counsel);
+		res.setContentType("text/html;charset=utf-8");
 //		System.out.println(c_data);
 		
-		this.dao.counsel_insert(c_data);
+		try {
+			this.pw = res.getWriter();
+			String c_lease = String.join(",", lease);
+			String c_living = String.join(",", living);
+			int counsel_insert = 0;
+			Map<String, String> c_data = new HashMap<String, String>();
+			c_data.put("c_name", dto.c_name);
+			c_data.put("c_email", dto.c_email);
+			c_data.put("c_phonenum", dto.c_phonenum);
+			c_data.put("c_lease", c_lease);
+			c_data.put("c_living", c_living);
+			c_data.put("c_day", dto.c_day);
+			c_data.put("c_counsel", dto.c_counsel);
+			counsel_insert = this.dao.counsel_insert(c_data);
+			if(counsel_insert > 0) {
+				this.pw.print("<script>"
+						+ "alert('정상적으로 상담신청이 되었습니다.');"
+						+ "location.href='./index.jsp';"
+						+ "</script>");
+			}else {
+				this.pw.print("<script>"
+						+ "alert('오류가 발생했습니다 다시 정확히 입력해주세요.');"
+						+ "history.go(-1);"
+						+ "</script>");
+			}
+			
+		} catch (Exception e) {
+			
+		}finally {
+			this.pw.close();
+		}
 		
-		return "/realty/index";
+		return null;
 	}
 	
 	
@@ -191,16 +212,6 @@ public class main_controller extends md5_pass {
 		
 		return null;
 	}
-	
-	
-	@GetMapping("/realty/week_tails.do")
-	public String week_tails() {
-		
-		
-		return null;
-	}
-	
-	
 	
 	
 	public String macbook_login() {

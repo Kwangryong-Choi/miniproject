@@ -78,7 +78,7 @@ public class memberjoin_DAO implements memberjoin_mapper {
 	
 	@Override
 	public memberjoin_DTO weekinfo(memberjoin_DTO dto) {
-		
-		return null;
+		memberjoin_DTO weekinfo = this.st.selectOne("select_weekinfo", dto);
+		return weekinfo;
 	}
 }

@@ -1,6 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
   <section> 
     <div class="weekdays">
       <p>금주분양 매물정보<br><em>이번주 신규 매물정보!</em></p>
@@ -12,7 +10,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><a href="./week_tails.do"><img src="./room/room1.jpg" style="width: 100%; height: auto;"></a></div>
+            <div><a href="./week_tails1.do"><img src="./room/room1.jpg" style="width: 100%; height: auto;" name="room1.jpg"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>

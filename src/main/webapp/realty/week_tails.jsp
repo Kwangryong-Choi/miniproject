@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +22,7 @@
 			<p>${ti_title}</p>
             <ul>
                 <li>종류</li>
-                <li>${ti_apt} | ${ti_part} </li>
+                <li>${weekinfo} | ${ti_part} </li>
                 <li>주소</li>
 				<li>${ti_address}</li>
                 <li>규모</li>

@@ -37,8 +37,8 @@ insert into counsel (cidx,c_name,c_email,c_phonenum,c_lease,c_living,c_day,c_cou
 values ('0',#{c_name},#{c_email},#{c_phonenum},#{c_lease},#{c_living},#{c_day},#{c_counsel},now())
 </insert>
 
-<select id="select_weekinfo" resultType="memberjoin_dto">
-select * from type_info
+<select id="select_weekinfo" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=1
 </select>
 
 </mapper>
