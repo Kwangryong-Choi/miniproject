@@ -37,8 +37,44 @@ insert into counsel (cidx,c_name,c_email,c_phonenum,c_lease,c_living,c_day,c_cou
 values ('0',#{c_name},#{c_email},#{c_phonenum},#{c_lease},#{c_living},#{c_day},#{c_counsel},now())
 </insert>
 
-<select id="select_weekinfo" resultType="memberjoin_dto" parameterType="int">
+
+
+
+
+
+
+
+
+<select id="select_weekinfo1" resultType="memberjoin_dto" parameterType="int">
 select * from type_info where ti_idx=1
+</select>
+
+<select id="select_weekinfo2" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=2
+</select>
+
+<select id="select_weekinfo3" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=3
+</select>
+
+<select id="select_weekinfo4" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=4
+</select>
+
+<select id="select_weekinfo5" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=5
+</select>
+
+<select id="select_weekinfo6" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=6
+</select>
+
+<select id="select_weekinfo7" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=7
+</select>
+
+<select id="select_weekinfo8" resultType="memberjoin_dto" parameterType="int">
+select * from type_info where ti_idx=8
 </select>
 
 </mapper>

@@ -22,11 +22,11 @@
 <span class="list_title">◎ <span style="color: blue;">상담자 정보</span></span>
 <ul class="sub_ul">
 <li>상담자명</li>    
-<li><input type="text" class="sel_input" name="c_name"></li> 
+<li><input type="text" class="sel_input" name="c_name" readonly></li> 
 <li>이메일</li>    
-<li><input type="text" class="sel_input" name="c_email"></li> 
+<li><input type="text" class="sel_input" name="c_email" readonly></li> 
 <li>연락처</li>    
-<li><input type="text" class="sel_input" name="c_phonenum"></li> 
+<li><input type="text" class="sel_input" name="c_phonenum" readonly></li> 
 <li>임대형태</li>    
 <li>
 <label><input type="checkbox" class="sel_check" name="c_lease" value="공공임대"> 공공임대</label>

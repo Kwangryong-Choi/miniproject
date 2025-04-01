@@ -22,13 +22,13 @@
 			<p>${ti_title}</p>
             <ul>
                 <li>종류</li>
-                <li>${weekinfo} | ${ti_part} </li>
+                <li>${ti_apt} | ${ti_part} </li>
                 <li>주소</li>
 				<li>${ti_address}</li>
                 <li>규모</li>
 				<li>총 104세대 | 총 2개동</li>
                 <li>시기</li>
-				<li>${sell_day} 분양 | ${in_day} 입주</li>
+				<li>${sell_day} | ${in_day} </li>
                 <li>난방구조</li>
 				<li>${ti_heat}</li>
                 <li>건설사</li>

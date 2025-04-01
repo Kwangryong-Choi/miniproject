@@ -18,7 +18,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room2.jpg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails2.do"><img src="./room/room2.jpg" style="width: 100%; height: auto;"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>
@@ -26,7 +26,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room3.jpg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails3.do"><img src="./room/room3.jpg" style="width: 100%; height: auto;"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>
@@ -34,7 +34,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room4.jpeg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails4.do"><img src="./room/room4.jpeg" style="width: 100%; height: auto;"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>
@@ -42,7 +42,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room5.jpg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails5.do"><img src="./room/room5.jpg" style="width: 100%; height: auto;"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>
@@ -50,7 +50,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room6.jpg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails6.do"><img src="./room/room6.jpg" style="width: 100%; height: auto;"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>
@@ -58,7 +58,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room7.jpg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails7.do"><img src="./room/room7.jpg" style="width: 100%; height: auto;"></a></div>
           </li>
           <li>
             <span style="color: red; font-size: 22px;">매매</span>
@@ -66,7 +66,7 @@
             <aside>송파구 문정동</aside>
             <span>아파트 | 공공임대</span>
             <label>2023.11 분양 | 2024.09 입주</label>
-            <div><img src="./room/room8.jpg" style="width: 100%; height: auto;"></div>
+            <div><a href="./week_tails8.do"><img src="./room/room8.jpg" style="width: 100%; height: auto;"></a></div>
           </li>
         </ul>
       </div>

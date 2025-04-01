@@ -75,10 +75,4 @@ public class memberjoin_DAO implements memberjoin_mapper {
 		int counsel_insert = this.st.insert("counsel_insert", c_data);
 		return counsel_insert;
 	}
-	
-	@Override
-	public memberjoin_DTO weekinfo(memberjoin_DTO dto) {
-		memberjoin_DTO weekinfo = this.st.selectOne("select_weekinfo", dto);
-		return weekinfo;
-	}
 }
