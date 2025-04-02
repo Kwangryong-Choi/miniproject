@@ -21,4 +21,8 @@ public interface memberjoin_mapper {
 	public int passwd_change(memberjoin_DTO dto);
 	
 	public int counsel_insert(Map<String, String> c_data);
+	
+	public int reservation_insert(memberjoin_DTO dto);
+	
+	public memberjoin_DTO reservation_select(String rv_name);
 }

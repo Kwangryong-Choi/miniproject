@@ -90,3 +90,18 @@ create table counsel(
 
 drop table counsel;
 
+
+
+create table reservation(
+	rv_idx int unsigned auto_increment,
+	rv_title varchar(100) not null,
+	rv_day varchar(20) not null,
+	rv_time varchar(20) not null,
+	rv_name varchar(50) not null,
+	rv_radio enum('1명','2명') not null default '1명',
+	rv_phonenum varchar(30) not null,
+	rv_today timestamp not null default current_timestamp,
+	primary key(rv_idx)
+);
+
+drop table reservation;

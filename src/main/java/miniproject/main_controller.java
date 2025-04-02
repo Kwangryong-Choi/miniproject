@@ -6,14 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class main_controller extends md5_pass {
@@ -207,18 +210,40 @@ public class main_controller extends md5_pass {
 	}
 	
 	
-	@GetMapping("/realty/weekinfo.jsp")
-	public String weekinfo() {
+	@PostMapping("/realty/reservation.do")
+	public String reservation(memberjoin_DTO dto, Model m,
+			@RequestParam(name = "rv_name",required = false) String rv_name) {
+
+		int reservation_insert = this.dao.reservation_insert(dto);
+		if(reservation_insert > 0) {
+			memberjoin_DTO rv_select = this.dao.reservation_select(rv_name);
+			m.addAttribute("rv_title", rv_select.rv_title);
+			m.addAttribute("rv_day", rv_select.rv_day);
+			m.addAttribute("rv_time", rv_select.rv_time);
+			m.addAttribute("rv_name", rv_select.rv_name);
+			m.addAttribute("rv_radio", rv_select.rv_radio);
+			m.addAttribute("rv_phonenum", rv_select.rv_phonenum);
+		}else {
+			
+		}
 		
-		return null;
+		return "/realty/reservation_check";
 	}
 	
 	
-	public String macbook_login() {
-		String pw = "a123456";
+	@PostMapping("/realty/md_board_ok.do")
+	public String bannerok(@ModelAttribute(name = "dto") memberjoin_DTO dto, MultipartFile bfile,
+			HttpServletRequest req) throws Exception {
+		String file_new = null;
 		
-		String result = this.md5_make(pw);
-		System.out.println(result);
+		if(bfile.getSize() > 0) {
+			
+			// 웹 디렉토리 개발자가 생성한 파일명으로 저장하는 코드
+			String url = req.getServletContext().getRealPath("/upload/");
+			System.out.println(url);
+		}
+		
+//		System.out.println(this.callback);
 		
 		return null;
 	}

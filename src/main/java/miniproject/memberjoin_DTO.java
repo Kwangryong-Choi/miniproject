@@ -20,4 +20,7 @@ public class memberjoin_DTO {
 	
 	int ti_idx, ti_price, ti_num;
 	String ti_title, ti_address, ti_apt, ti_part, sell_day, in_day, ti_img, ti_heat, structure, present;
+	
+	int rv_idx;
+	String rv_title, rv_day, rv_time, rv_name, rv_radio, rv_phonenum, rv_today;
 }

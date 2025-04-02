@@ -38,6 +38,16 @@ values ('0',#{c_name},#{c_email},#{c_phonenum},#{c_lease},#{c_living},#{c_day},#
 </insert>
 
 
+<insert id="reservation_insert">
+insert into reservation (rv_idx,rv_title,rv_day,rv_time,rv_name,rv_radio,rv_phonenum,rv_today) 
+values ('0',#{rv_title},#{rv_day},#{rv_time},#{rv_name},#{rv_radio},#{rv_phonenum},now())
+</insert>
+
+<select id="reservation_select" resultType="memberjoin_dto" parameterType="String">
+select * from reservation where rv_name=#{rv_name}
+</select>
+
+
 
 
 

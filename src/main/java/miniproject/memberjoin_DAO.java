@@ -75,4 +75,16 @@ public class memberjoin_DAO implements memberjoin_mapper {
 		int counsel_insert = this.st.insert("counsel_insert", c_data);
 		return counsel_insert;
 	}
+	
+	@Override
+	public int reservation_insert(memberjoin_DTO dto) {
+		int reservation_insert = this.st.insert("reservation_insert", dto);
+		return reservation_insert;
+	}
+	
+	@Override
+	public memberjoin_DTO reservation_select(String rv_name) {
+		memberjoin_DTO reservation_select = this.st.selectOne("reservation_select", rv_name);
+		return reservation_select;
+	}
 }
