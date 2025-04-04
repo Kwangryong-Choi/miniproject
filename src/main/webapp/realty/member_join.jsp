@@ -1,12 +1,16 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
+<%
+	Date date = new Date();
+%>    
 <%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./css/index.css?v=7">
-  <link rel="stylesheet" type="text/css" href="./css/member_join.css?v=3">
+  <link rel="stylesheet" type="text/css" href="./css/index.css?v=<%=date%>">
+  <link rel="stylesheet" type="text/css" href="./css/member_join.css?v=<%=date%>">
 <style>
 .box {
    width: 800px;
@@ -95,5 +99,5 @@ function email_check(){
 
 
 </script>
-<script src="./js/member_join.js?v=6"></script>
+<script src="./js/member_join.js?v=<%=date%>"></script>
 </html>

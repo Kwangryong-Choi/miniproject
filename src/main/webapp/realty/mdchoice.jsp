@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
   <section>
     <div class="recommend">
+    <!-- 추천분양정보를 누르면 리스트가 있는곳으로 이동해야 함 -->
       <p>추천분양정보<br><em>실시간 추천 분양정보를 한곳에!</em></p>
       <div class="md_estates">
         <ul>

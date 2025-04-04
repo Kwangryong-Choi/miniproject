@@ -1,12 +1,16 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Date date = new Date();
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>추천분양 정보 게시판</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/md_board_view.css?v=6">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=<%=date%>">
+<link rel="stylesheet" type="text/css" href="./css/md_board_view.css?v=<%=date%>">
 <script src="./ckeditor/ckeditor.js"></script>
 <style>
 .box {
@@ -37,7 +41,7 @@
             <li><input type="file" name="md_img"></li>
             <li class="litext">내&nbsp;&nbsp;&nbsp;용</li>
             <li class="litext">
-                <textarea id="board_text" name="md_board_text">
+                <textarea id="board_text" name="board_text">
                     
                 </textarea>
             </li>
@@ -60,5 +64,5 @@
 	<%@ include file="./copyright.jsp" %>
  <!-- 카피라이터 끝 -->
 </body>
-<script src="./js/md_board_write.js?v=3"></script>
+<script src="./js/md_board_write.js?v=<%=date%>"></script>
 </html>

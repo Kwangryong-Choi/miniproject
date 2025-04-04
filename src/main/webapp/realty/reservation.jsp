@@ -1,11 +1,15 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	Date date = new Date();
+%>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>모댈 하우스 사전 방문예약</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/reservation.css?v=4">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=<%=date%>">
+<link rel="stylesheet" type="text/css" href="./css/reservation.css?v=<%=date%>">
 </head>
 <body>
 <!-- 최상단 + 메뉴 (top.jsp) -->
@@ -56,5 +60,5 @@
 	<%@ include file="./copyright.jsp" %>
  <!-- 카피라이터 끝 -->
 </body>
-<script src="./js/reservation.js?v=1"></script>
+<script src="./js/reservation.js?v=<%=date%>"></script>
 </html>

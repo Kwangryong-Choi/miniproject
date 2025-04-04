@@ -1,12 +1,16 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Date date = new Date();
+%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>추천분양 정보 게시판</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/md_board_view.css?v=5">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=<%=date%>">
+<link rel="stylesheet" type="text/css" href="./css/md_board_view.css?v=<%=date%>">
 <style>
 .box {
    width: 800px;

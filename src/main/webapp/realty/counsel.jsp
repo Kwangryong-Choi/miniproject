@@ -1,12 +1,16 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Date date = new Date();
+%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>상담신청</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/counsel.css?v=3">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=<%=date%>">
+<link rel="stylesheet" type="text/css" href="./css/counsel.css?v=<%=date%>">
 </head>
 <body>
 
@@ -60,5 +64,5 @@
  <!-- 카피라이터 끝 -->
  
 </body>
-<script src="./js/counsel.js?v=4"></script>
+<script src="./js/counsel.js?v=<%=date%>"></script>
 </html>

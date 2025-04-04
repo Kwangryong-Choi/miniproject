@@ -1,12 +1,16 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Date date = new Date();
+%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>패스워드 찾기 및 변경</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/search_myinfo.css?v=2">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=<%=date%>">
+<link rel="stylesheet" type="text/css" href="./css/search_myinfo.css?v=<%=date%>">
 </head>
 <body>
 
@@ -36,5 +40,5 @@
  <!-- 카피라이터 끝 -->
  
 </body>
-<script src="./js/change_passwd.js?v=1"></script>
+<script src="./js/change_passwd.js?v=<%=date%>"></script>
 </html>
